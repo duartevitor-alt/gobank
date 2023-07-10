@@ -1,11 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"log"
 )
 
 func main() {
 
+	fmt.Println("Starting our program")
 	store, err := NewPostgresStore()
 	if err != nil {
 		log.Fatal(err)
