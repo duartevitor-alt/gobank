@@ -10,6 +10,11 @@ type CreateAccountRequest struct {
 	LastName  string `json:"last_name"`
 }
 
+type CreateAccountUpdateRequest struct {
+	ID      int   `json:"id"`
+	Balance int64 `json:"balance"`
+}
+
 type Account struct {
 	ID         int       `json:"id"`
 	FirstName  string    `json:"first_name"`
