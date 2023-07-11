@@ -65,7 +65,7 @@ func (s *APIServer) handleAccount(w http.ResponseWriter, r *http.Request) error 
 		return s.handleDeleteAccount(w, r)
 	}
 
-	return fmt.Errorf("Method not allowed %s", r.Method)
+	return fmt.Errorf("method not allowed %s", r.Method)
 }
 
 func (s *APIServer) handleGetAccountByID(w http.ResponseWriter, r *http.Request) error {
@@ -107,9 +107,9 @@ func (s *APIServer) handleDeleteAccount(w http.ResponseWriter, r *http.Request) 
 	return nil
 }
 
-func (s *APIServer) handleTransfer(w http.ResponseWriter, r *http.Request) error {
+/*func (s *APIServer) handleTransfer(w http.ResponseWriter, r *http.Request) error {
 	return nil
-}
+}*/
 
 func (s *APIServer) handleGetAccount(w http.ResponseWriter, r *http.Request) error {
 
