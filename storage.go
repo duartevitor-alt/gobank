@@ -57,6 +57,12 @@ func (s *PostgresStore) CreateAccountTable() error {
 	return err
 }
 
+func (s *PostgresStore) DropAccountTable() error {
+	qur := "DROP TABLE ACCOUNT"
+	_, err := s.db.Exec(qur)
+	return err
+}
+
 func (s *PostgresStore) CreateAccount(a *Account) error {
 	query := fmt.Sprintf(
 		`INSERT INTO ACCOUNT(
